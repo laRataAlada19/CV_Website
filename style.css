@@ -428,35 +428,28 @@ nav ul li a {
     max-width: 120px;
 }
 
+.skills-container {
+    display: flex;
+    gap: 1rem;
+    animation: scrollSkills 20s linear infinite;
+    transition: none;
+}
+
 @keyframes scrollSkills {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-40%);
     }
-}
-
-.skills-container {
-    display: flex;
-    width: 100%;
-    animation: scrollSkills 20s linear infinite;
-    gap: 1rem;
-    transition: none;
 }
 
 @media (max-width: 900px) {
     .skills {
-        width: 380px;
-    }
-
-    .skills-wrapper {
-        animation: scrollSkills 20s linear infinite;
-    }
-
-    .skills-wrapper:hover {
-        animation-play-state: paused;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
     }
 
     .skill-item img {
@@ -472,9 +465,9 @@ nav ul li a {
         0% {
             transform: translateX(0);
         }
-
+    
         100% {
-            transform: translateX(-150%);
+            transform: translateX(-25%);
         }
     }
 }
