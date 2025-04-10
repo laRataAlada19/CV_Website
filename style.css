@@ -491,6 +491,7 @@ footer {
     border: 2px solid #ff9900;
     border-radius: 10px;
     box-shadow: 0 4px 8px #ff9900;
+    width: 100%;
 }
 
 .projects h2 {
@@ -510,16 +511,30 @@ footer {
     border-radius: 2px;
 }
 
-.projects h3 {
-    margin-right: 10px;
-}
-
 .project-card {
     background: #1e1e1e;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card > div:first-child {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
 }
 
 .project-card:hover {
@@ -531,8 +546,7 @@ footer {
 .project-card img {
     width: 35px;
     height: 35px;
-    margin-left: 0;
-    display: block;
+    object-fit: contain;
 }
 
 .highlight {
@@ -542,6 +556,19 @@ footer {
 @media (max-width: 768px) {
     .projects {
         width: 380px;
+        padding: 1.5rem 0.8rem;
+    }
+
+    .project-card {
+        width: 340px;
+        min-height: 280px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .project-card > div:first-child {
+        gap: 10px; 
+        margin-bottom: 10px;
     }
 
     .project-card img {
@@ -549,9 +576,13 @@ footer {
         height: 30px;
     }
 
-    .project-card {
-        width: 340px;
-        height: 280px;
+    .project-card h3 {
+        font-size: 1.1rem;
+        min-width: 150px;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-3px) scale(1.01);
     }
 }
 
@@ -633,6 +664,7 @@ footer {
     .contact {
         padding: 1rem;
         width: 380px;
+        margin-top: 100px;
     }
 
     .contact-container {
