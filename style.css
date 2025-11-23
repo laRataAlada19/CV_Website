@@ -465,7 +465,7 @@ nav ul li a {
         0% {
             transform: translateX(0);
         }
-    
+
         100% {
             transform: translateX(-25%);
         }
@@ -523,7 +523,7 @@ footer {
     flex-direction: column;
 }
 
-.project-card > div:first-child {
+.project-card>div:first-child {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -566,8 +566,8 @@ footer {
         padding: 15px;
     }
 
-    .project-card > div:first-child {
-        gap: 10px; 
+    .project-card>div:first-child {
+        gap: 10px;
         margin-bottom: 10px;
     }
 
@@ -580,7 +580,7 @@ footer {
         font-size: 1.1rem;
         min-width: 150px;
     }
-    
+
     .project-card:hover {
         transform: translateY(-3px) scale(1.01);
     }
@@ -593,6 +593,78 @@ footer {
 
     100% {
         background-color: transparent;
+    }
+}
+
+/* WORK SECTION */
+.work {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem 1rem;
+    border: 2px solid #ff9900;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #ff9900;
+}
+
+.work h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.work h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #ff9900;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.work-card {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.work-card:hover {
+    background: #2a2a2a;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.work-card-imgs {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.work-card img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .work {
+        width: 380px;
+        padding: 1.5rem 0.8rem;
+    }
+
+    .work-card {
+        width: 340px;
+        min-height: 200px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .work-card:hover {
+        transform: translateY(-3px) scale(1.01);
     }
 }
 
